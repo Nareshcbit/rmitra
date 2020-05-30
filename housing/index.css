@@ -1,8 +1,17 @@
+
+:root {
+--imperial-red: hsla(356, 73%, 89%, 1);
+--vivid-burgundy: hsla(355, 69%, 64%, 1);
+--burgundy: hsla(349, 99%, 47%, 1);
+--coral: hsla(16, 68%, 100%, 1);
+--light-salmon: hsla(20, 47%, 100%, 1);
+}
+
 .container {
     height: 100%;
     display: grid;
-    grid-gap: 3px;
-    grid-template-columns: [main-start] 1fr [content-start] 5fr [content-end main-end];
+    grid-gap: 0px;
+    grid-template-columns: [main-start] 3fr [content-start] 9fr [content-end main-end];
     grid-template-rows: [main-start] 60px [content-start] auto [content-end] 40px [main-end];
 }
 
@@ -16,6 +25,7 @@
     grid-column: content-start / content-end;
     display: grid;
     grid-gap: 3px;
+    border-right: 5px solid #4F9D69;
 }
 
 .footer {
@@ -27,30 +37,77 @@
   /*grid-gap: 10px;*/
   row-gap: 5px;
   grid-column-gap: 0px;
-  grid-template-columns: [row-start image-start] 300px [image-end details-start] 300px  [details-end  links-start] 300px [links-end row-end];
+  grid-template-columns: [row-start image-start] 3fr [image-end details-start] 4fr  [details-end  links-start] 3fr [links-end row-end];
   grid-template-rows: 300px;
   margin-bottom: 5px;
+  background-color: white;
+  border-radius: 5px;
 }
 
 .item-image{
   grid-column: image;
   background-color: none;
-  background-image: url('https://relakhs.com/wp-content/uploads/2014/06/Khatha-fees-snip.jpg')
+  background-image: url('https://relakhs.com/wp-content/uploads/2014/06/Khatha-fees-snip.jpg');
+  border-right: 1px solid black;
+  border-radius: 5px;
+  margin-right: 5px;
 }
 
 .item-details{
-  background-color: blue;
+  margin-left: 5px;
   grid-column: details;
+  border-right: 1px solid black;
 }
 
 .item-links{
-  background-color: green;
   grid-column: links;
 }
 
 .image-title span{
   border-radius: 15px;
-  background: #73AD21;
+  /*background: #73AD21;*/
+  background: #DD614A;
   padding: 10px;
+  height: 10px;
+  color: #ffffff;
+  font-size: 0.8em;
+}
+
+
+.doc-purpose span{
+  border-radius: 15px;
   height: 20px;
+  font-size: 1.2em;
+}
+
+.required-for{
+  bottom: 0;
+  font-size: 1.2em;
+}
+.required-for span{
+  font-size: 0.8em;
+}
+
+.item-links{
+  padding: 5px;
+}
+
+.item-links p{
+  font-size: 1em;
+  color: blue;
+}
+
+.item-links button{
+  background-color: #7EBC89; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.header h2{
+  color: white;
 }
